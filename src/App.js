@@ -1,26 +1,29 @@
-import react, {useState} from 'react'
+import react, { useState } from 'react'
 import './App.css';
 
 function App() {
   const [result, setResult] = useState(" ");
-  const handleClick = (e) =>{
+  const handleClick = (e) => {
     setResult(result.concat(e.target.name));
   }
-  const clear = () =>{
+  const clear = () => {
     setResult("");
   }
-  const backspace = () =>{
+  const backspace = () => {
     setResult(result.slice(0, -1));
   }
-  const calculate = () =>{
-    try{
+  const calculate = () => {
+    try {
       setResult(eval(result).toString());
-    }catch(err){
+    } catch (err) {
       setResult("error")
     }
   }
   return (
     <>
+      <div className="head-tag">
+        <h1>SIMPLE-CALCULATOR USING REACT-JS</h1>
+      </div>
       <div className="container">
         <form>
           <input type="text" value={result} />
@@ -43,7 +46,7 @@ function App() {
           <button name="3" onClick={handleClick} >3</button>
           <button className="highlight" name="+" onClick={handleClick} >+</button>
           <button name="0" onClick={handleClick} >0</button>
-          <button className="highlight"name="." onClick={handleClick} >.</button>
+          <button className="highlight" name="." onClick={handleClick} >.</button>
           <button className="highlight" onClick={calculate} id="result">=</button>
         </div>
       </div>

@@ -8,6 +8,13 @@ body{
   align-items: center;
 }
 
+.head-tag h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
 .container{
   top: 50%;
   left: 50%;
@@ -17,8 +24,8 @@ body{
   width: 256px;
   text-align: center;
   border: 10px solid #101116;
-  background: #101116;
-  border-radius: 5px;
+  background: #2445e9;
+  border-radius: 10px;
 }
 
 .keypad{
@@ -28,8 +35,8 @@ body{
 }
 
 input[type="text"]{
-  height: 75px;
-  width:249px;
+  height: 70px;
+  width:230px;
   background-color: #10111600;
   border: 0px;
   color: #ffffff;
@@ -37,6 +44,9 @@ input[type="text"]{
   font-size: 25px;
   font-weight: 500;
   letter-spacing: 1px;
+  border: 5px solid #262834;
+  margin: 5px;
+  margin-top: 10px;
 }
 
 #clear{
@@ -61,7 +71,7 @@ button{
   border-radius: 5px;
   cursor: pointer;
   background: #262834;
-  color: #ffffff;
+  color: #ee1628;
   font-weight: 500;
 }
 
